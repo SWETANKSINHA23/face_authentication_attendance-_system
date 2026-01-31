@@ -9,3 +9,6 @@ libxext6
 libopenblas-dev
 liblapack-dev
 python3-dev
+libboost-all-dev
+libjpeg-dev
+libpng-dev
