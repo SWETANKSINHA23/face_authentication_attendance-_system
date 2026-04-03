@@ -10,6 +10,9 @@ BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 DATABASE_PATH = DATA_DIR / "database.db"
 FACE_IMAGES_DIR = DATA_DIR / "face_images"
+MODELS_DIR = BASE_DIR / "models"
+DETECTION_MODEL_PATH = MODELS_DIR / "face_detection_yunet.onnx"
+RECOGNITION_MODEL_PATH = MODELS_DIR / "face_recognition_sface.onnx"
 
 # Deployment Settings
 # 'local': Use local webcam (cv2) - Faster, Real-time
@@ -23,9 +26,9 @@ CAMERA_HEIGHT = 480
 CAMERA_FPS = 30
 
 # Face Detection Settings
-FACE_DETECTION_MODEL = "hog"  # 'hog' for CPU, 'cnn' for GPU
-NUM_JITTERS = 1  # Number of times to resample face for encoding (higher = more accurate but slower)
-FACE_DETECTION_UPSAMPLE = 1  # How many times to upsample the image for face detection
+FACE_DETECTION_CONFIDENCE = 0.5  # MediaPipe/YuNet confidence threshold
+MIN_FACE_SIZE = 50  # Minimum face size in pixels
+MAX_FACE_SIZE = 500  # Maximum face size in pixels
 
 # Face Recognition Settings
 FACE_MATCH_THRESHOLD = 0.6  # Lower is more strict (0.0-1.0)
