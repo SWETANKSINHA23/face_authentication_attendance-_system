@@ -6,8 +6,8 @@ def download_models():
     """
     Download OpenCV YuNet (Detection) and SFace (Recognition) ONNX models
     """
-    # Use the local project directory
-    models_dir = Path("d:/face_authentication_attendance-_system-main/face_authentication_attendance-_system-main/models")
+    # Use the current directory (project root)
+    models_dir = Path(__file__).parent / "models"
     os.makedirs(models_dir, exist_ok=True)
     
     # Official OpenCV Zoo URLs (Updated to 'main' branch)
