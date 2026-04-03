@@ -1,18 +1,12 @@
 services:
   - type: web
     name: face-auth-attendance
-    env: python
-    buildCommand: |
-      # Install system dependencies
-      apt-get update && apt-get install -y $(cat packages.txt)
-      # Install python dependencies
-      pip install --upgrade pip
-      pip install -r requirements.txt
-    startCommand: streamlit run app.py
+    env: docker
+    plan: free # or starter if RAM issues occur
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.12
       - key: STREAMLIT_SERVER_PORT
         value: 10000
       - key: STREAMLIT_SERVER_HEADLESS
         value: "true"
+      - key: STREAMLIT_SERVER_ADDRESS
+        value: "0.0.0.0"
