@@ -1,5 +1,7 @@
 # Face Authentication Attendance System
 
+🚀 **Live Demo:** [https://face-auth-attendance-8627.onrender.com/](https://face-auth-attendance-8627.onrender.com/)
+
 A comprehensive face recognition-based attendance management system using OpenCV SFace, Google MediaPipe, and Streamlit. This lightweight stack is optimized for instant deployment and fast execution even on free-tier cloud platforms.
 
 ---
