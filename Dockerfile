@@ -25,6 +25,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copy the rest of the application
 COPY . .
 
+# Explicitly download OpenCV SFace Models
+RUN python download_models.py
+
 # Expose port
 EXPOSE 10000
 
