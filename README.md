@@ -254,3 +254,5 @@ streamlit run app.py
 ```
 
 Application opens at: `http://localhost:8501`
+
+*(End of technical documentation for the Lightweight Version)*
